@@ -54,12 +54,12 @@ export const Homepage = () => {
     <div className='homepage text-white'>
         <div className='flex flex-col gap-10 p-20'>
             <h1
-            className='text-5xl font-extrabold mb-15'>Weather Forecast For You</h1>
+            className='lg:text-5xl text-2xl font-bold lg:text-justify text-center text-nowrap lg:font-extrabold mb-10'>Weather Forecast For You</h1>
             
             {/* Favorites Section */}
             {favorites.length > 0 && (
               <div>
-                <h2 className='text-2xl font-bold mb-5'>Your Favorite Places</h2>
+                <h2 className='text-2xl text-center lg:text-justify font-bold mb-5'>Your Favorite Places</h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10'>
                   {favorites.map((fav) => (
                     <div key={fav.id} className='city-card flex flex-col justify-between bg-opacity-30 p-5 rounded-2xl hover:bg-opacity-40 cursor-pointer transition'>
@@ -102,14 +102,14 @@ export const Homepage = () => {
             
             {weather && (
               <>
-                <div className='city-card flex flex-row justify-between bg-opacity-30 p-5 rounded-2xl'>
+                <div className='city-card flex flex-row justify-between bg-opacity-30 p-5 rounded-2xl '>
                   <div className='flex flex-col gap-10'>
-                      <div className='flex flex-row gap-5'>
+                      <div className='flex lg:flex-row flex-col lg:gap-5 gap-2'>
                           <h1>{weather.location.name}, {weather.location.country}</h1>
                           <p>{weather.current.temp_c}°C</p>
                           <p>{weather.current.condition.text}</p>
                       </div>
-                      <div className='flex flex-row gap-5'>
+                      <div className='flex lg:flex-row flex-col lg:gap-5 gap-2'>
                           <p>Humidity: {weather.current.humidity}%</p>
                           <p>Wind: {weather.current.wind_kph} kph</p>
                       </div>
@@ -128,9 +128,9 @@ export const Homepage = () => {
                 {weather.forecast && (
                   <div>
                       <h1 className='text-lg'>Week Forecast</h1>
-                      <div className='grid grid-cols-5 gap-3 mt-5 mb-5'>
+                      <div className='grid lg:grid-cols-5 gap-3 mt-5 mb-5'>
                           {weather.forecast.forecastday.map((day, index) => (
-                              <div key={index} className='day-card rounded-md shadow-md w-50 h-50 px-10 py-5 flex flex-col items-center gap-2'>
+                              <div key={index} className='day-card rounded-md shadow-md lg:w-50 w-full h-50 px-10 py-5 flex flex-col items-center gap-2'>
                                   <p>{new Date(day.date).toLocaleDateString('en-US', { weekday: 'short' })}</p>
                                   <p>{day.date}</p>
                                   <p className='text-sm'>{day.day.condition.text}</p>

@@ -48,7 +48,7 @@ export const FavoritePage = () => {
   return (
     <div className='favorite-page h-fit text-white'>
       <div className='flex flex-col gap-10 p-20'>
-        <h1 className='text-5xl font-extrabold'>Favorite Places</h1>
+        <h1 className='lg:text-5xl text-3xl text-nowrap text-center lg:text-justify font-bold lg:font-extrabold'>Favorite Places</h1>
         
         {favorites.length === 0 ? (
           <div className='text-center text-gray-400 mt-10'>
