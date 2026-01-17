@@ -20,6 +20,6 @@ input[type="search"] {
 }
 
 .city-card, .day-card {
-  background-color: #222731; 
-
+  background-color: #222731;
+  color: #e0e0e0;
 }

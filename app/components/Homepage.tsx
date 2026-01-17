@@ -89,7 +89,7 @@ export const Homepage = () => {
             <form onSubmit={handleSearch} className='flex gap-2'>
               <input 
                 type="search" 
-                placeholder='search city'
+                placeholder='Search City...'
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 className='flex-1 px-4 py-2 rounded-lg bg-gray-200 text-black'
